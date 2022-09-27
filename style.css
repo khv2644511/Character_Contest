@@ -1,4 +1,39 @@
 /* anmaition */
+
+@keyframes 눈반짝 {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes 메롱 {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 50%;
+    height: 60%;
+  }
+  100% {
+    opacity: 100%;
+    /* height: ; */
+  }
+}
+
+@keyframes 입커짐 {
+  from {
+    height: 0px;
+  }
+  to {
+    transform: scale(1.3, 1.4) translateY(10px);
+  }
+}
+
 /* setting */
 /* reset (에릭마이어 reset에 추가로 reset하고 싶을 때) */
 
@@ -158,6 +193,7 @@ body {
   border: 4px solid #fff;
   background-color: #fff;
   border-radius: 50%;
+  animation: 눈반짝 0.1s infinite alternate;
 }
 
 .eye .twinkle.bottom {
@@ -224,9 +260,11 @@ body {
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 70%;
   background-color: #d04433;
-  top: 290px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 250px;
+  left: 41%;
+  animation: 입커짐 0.8s alternate infinite;
+  /* animation: 입커짐 0.5s alternate infinite; */
+  /* transform: scale(1.3, 1.4) translateY(10px); */
   z-index: 10;
 }
 
@@ -251,11 +289,10 @@ body {
   border-top-right-radius: 70%;
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 70%;
-
   background-color: #f59591;
-
-  bottom: -2px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  bottom: -3px;
+  left: 9%;
+  animation: 메롱 0.8s alternate infinite;
+  /* transform: scale(1, 3.4) translateY(10px); */
   z-index: 10;
 }
