@@ -1,5 +1,23 @@
 /* anmaition */
 
+@keyframes 귀흔들왼쪽 {
+  from {
+    transform: rotate(-20deg);
+  }
+  to {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes 귀흔들오른쪽 {
+  from {
+    transform: rotate(20deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+
 @keyframes 윙크 {
   0% {
   }
@@ -19,6 +37,12 @@
   }
 }
 
+@keyframes blush {
+  to {
+    background-color: #f59591;
+  }
+}
+
 @keyframes 메롱 {
   0% {
     opacity: 0;
@@ -26,10 +50,6 @@
   }
   40% {
     opacity: 0;
-    /* transform: scale(0); */
-  }
-  100% {
-    transform: scale(1);
   }
 }
 
@@ -38,7 +58,7 @@
     height: 0px;
   }
   to {
-    transform: scale(1.3, 1.4) translateY(10px);
+    transform: scale(1.1, 1.2) translateY(0px);
   }
 }
 
@@ -110,9 +130,9 @@ strong {
 
 .pig_rabbit {
   position: relative;
-  width: 600px;
-  height: 600px;
-  /* background-color: pink; */
+  width: 500px;
+  height: 460px;
+  /* background-color: red; */
   margin: 10px auto;
   animation: pig_rabbit 1.8s alternate infinite;
 }
@@ -128,13 +148,15 @@ strong {
 }
 
 .ear.left {
-  left: 150px;
-  transform: rotate(-10deg);
+  left: 145px;
+  transform: rotate(-20deg);
+  animation: 귀흔들왼쪽 0.8s alternate infinite;
 }
 
 .ear.right {
-  right: 150px;
-  transform: rotate(10deg);
+  right: 145px;
+  transform: rotate(20deg);
+  animation: 귀흔들오른쪽 0.8s alternate infinite;
 }
 
 .ear-left-inner {
@@ -166,8 +188,8 @@ strong {
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 450px;
-  height: 400px;
+  width: 350px;
+  height: 300px;
   border: 5px solid black;
   border-radius: 50%;
   background-color: white;
@@ -178,45 +200,41 @@ strong {
   position: absolute;
   left: 0px;
   top: -1px;
-  width: 440px;
-  height: 392px;
+  width: 340px;
+  height: 292px;
   border-radius: 50%;
   background-color: #fff;
+}
+
+.cheeck {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border: 5px solid black;
+  border-radius: 50%;
+  top: 117px;
 }
 
 .cheeck.left {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: #fff;
-  border: 5px solid black;
-  border-radius: 50%;
-  top: 152px;
-  left: -61px;
+  left: -55px;
   animation: 왼쪽볼살 0.5s alternate infinite;
-  /* transform: translate(10px, 0); */
 }
 
 .cheeck.right {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  background-color: #fff;
-  border: 5px solid black;
-  border-radius: 50%;
-  top: 152px;
-  right: -61px;
+  right: -55px;
   animation: 오른쪽볼살 0.5s alternate infinite;
 }
 
 .pinkcheek {
   position: absolute;
-  width: 80px;
-  height: 50px;
+  width: 60px;
+  height: 30px;
   background-color: #f8c5c8;
   border-radius: 50%;
-  top: 190px;
+  top: 155px;
   z-index: 10;
+  animation: blush 0.5s alternate infinite;
 }
 
 .pinkcheek.left {
@@ -229,9 +247,9 @@ strong {
 
 .eye {
   position: absolute;
-  top: 100px;
-  width: 80px;
-  height: 80px;
+  top: 80px;
+  width: 60px;
+  height: 60px;
   border: 4px solid black;
   background-color: black;
   border-radius: 50%;
@@ -240,19 +258,19 @@ strong {
 }
 
 .eye.left {
-  left: 100px;
+  left: 80px;
 }
 
 .eye.right {
-  right: 100px;
+  right: 80px;
 }
 
 .eye .twinkle.top {
   position: absolute;
   top: 0;
   left: 7px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border: 4px solid #fff;
   background-color: #fff;
   border-radius: 50%;
@@ -273,13 +291,13 @@ strong {
 
 .nose {
   position: absolute;
-  width: 90px;
-  height: 35px;
+  width: 80px;
+  height: 30px;
   border: 5px solid black;
   background-color: #f8c5c8;
   border-radius: 50%;
   left: 50%;
-  top: 55%;
+  top: 58%;
   transform: translate(-50%, -50%);
   z-index: 10;
 }
@@ -287,7 +305,7 @@ strong {
 .nosehole {
   position: absolute;
   width: 10px;
-  height: 20px;
+  height: 15px;
   background-color: #ff8aa2;
   border-radius: 50%;
   top: 3px;
@@ -307,10 +325,10 @@ strong {
 .piltrum {
   position: absolute;
   width: 0.1px;
-  height: 20px;
+  height: 25px;
   border: 2px solid black;
   position: absolute;
-  top: 62%;
+  top: 66%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -318,24 +336,22 @@ strong {
 
 .mouth {
   position: absolute;
-  width: 80px;
-  height: 80px;
-  border: 5px solid black;
+  width: 60px;
+  height: 60px;
+  border: 3px solid black;
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 70%;
   background-color: #d04433;
-  top: 250px;
+  top: 199px;
   left: 41%;
   animation: 입커짐 0.8s alternate infinite;
-  /* animation: 입커짐 0.5s alternate infinite; */
-  /* transform: scale(1.3, 1.4) translateY(10px); */
   z-index: 10;
 }
 
 .teeth {
   position: absolute;
-  width: 40px;
-  height: 20px;
+  width: 30px;
+  height: 15px;
   border: 3px solid black;
   background-color: #fff;
   top: -3px;
@@ -346,20 +362,17 @@ strong {
 
 .tongue {
   position: absolute;
-  width: 60px;
-  height: 40px;
+  width: 50px;
+  height: 30px;
   border: 3px solid black;
   border-top-left-radius: 70%;
   border-top-right-radius: 70%;
   border-bottom-left-radius: 70%;
   border-bottom-right-radius: 70%;
   background-color: #f59591;
-  bottom: -3px;
-  left: 9%;
-  animation: 메롱 0.8s alternate infinite forwards;
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-  /* animation-duration: */
-  /* transform: scale(1, 1); */
+  bottom: -2px;
+  left: 2px;
+  animation: 메롱 0.8s alternate infinite;
   z-index: 10;
 }
 
@@ -367,9 +380,9 @@ strong {
   position: absolute;
   width: 100px;
   height: 100px;
-  top: -10%;
+  top: -5%;
   left: 50%;
-  transform-origin: 0 500px;
+  transform-origin: 0 370px;
   animation: feed 3s linear infinite;
 }
 .carrot.one {
