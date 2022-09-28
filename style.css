@@ -18,22 +18,21 @@
   }
 }
 
-@keyframes 윙크 {
-  0% {
+@keyframes 눈반짝top {
+  from {
+    transform: translate(0, 0);
   }
-  70% {
-    transform: scale(1, 0.1);
-  }
-  100% {
+  to {
+    transform: translate(2px, 0);
   }
 }
-@keyframes 눈반짝 {
-  from {
-    transform: translateX(0px);
-  }
 
+@keyframes 눈반짝bottom {
+  from {
+    transform: translate(0, 0);
+  }
   to {
-    transform: translate(4px, 4px);
+    transform: translate(3px, 3px);
   }
 }
 
@@ -69,6 +68,7 @@
     transform: translate(3px, 3px);
   }
 }
+
 @keyframes 오른쪽볼살 {
   from {
   }
@@ -76,14 +76,6 @@
     transform: translate(-3px, 3px);
   }
 }
-/* @keyframes pig_rabbit {
-  from {
-    transform: translate(-5px, 0) rotate(-20deg);
-  }
-  to {
-    transform: translate(5px, 0) rotate(20deg);
-  }
-} */
 
 @keyframes title {
   from {
@@ -92,8 +84,6 @@
     transform: scale(1.4);
   }
 }
-/* setting */
-/* reset (에릭마이어 reset에 추가로 reset하고 싶을 때)*/
 
 @keyframes feed {
   to {
@@ -101,6 +91,8 @@
   }
 }
 
+/* reset */
+/* setting */
 body {
   margin: 0;
   padding: 0;
@@ -108,7 +100,6 @@ body {
   background-color: #f8c5c8;
 }
 
-/* layout */
 *,
 *::after,
 *::before {
@@ -132,7 +123,6 @@ strong {
   position: relative;
   width: 500px;
   height: 460px;
-  /* background-color: red; */
   margin: 10px auto;
   animation: pig_rabbit 1.8s alternate infinite;
 }
@@ -254,7 +244,6 @@ strong {
   background-color: black;
   border-radius: 50%;
   z-index: 10;
-  /* animation: 윙크 1s infinite ease; */
 }
 
 .eye.left {
@@ -274,19 +263,19 @@ strong {
   border: 4px solid #fff;
   background-color: #fff;
   border-radius: 50%;
-  /* animation: 눈반짝 0.2s alternate infinite; */
+  animation: 눈반짝top 0.2s alternate infinite;
 }
 
 .eye .twinkle.bottom {
   position: absolute;
-  bottom: 11px;
+  bottom: 8px;
   right: 8px;
   width: 20px;
   height: 20px;
   border: 4px solid #fff;
   background-color: #fff;
   border-radius: 50%;
-  animation: 눈반짝 0.15s alternate infinite;
+  animation: 눈반짝bottom 0.15s alternate infinite;
 }
 
 .nose {
@@ -316,10 +305,6 @@ strong {
 }
 .nosehole.right {
   right: 20px;
-}
-
-.botton {
-  position: relative;
 }
 
 .piltrum {
