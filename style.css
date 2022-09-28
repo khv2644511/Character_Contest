@@ -46,34 +46,40 @@
   from {
   }
   to {
-    transform: translate(3px, 1px);
+    transform: translate(3px, 3px);
   }
 }
 @keyframes 오른쪽볼살 {
   from {
   }
   to {
-    transform: translate(-3px, 1px);
+    transform: translate(-3px, 3px);
   }
 }
-@keyframes pig_rabbit {
+/* @keyframes pig_rabbit {
   from {
     transform: translate(-5px, 0) rotate(-20deg);
   }
   to {
     transform: translate(5px, 0) rotate(20deg);
   }
-}
+} */
 
 @keyframes title {
   from {
   }
   to {
-    transform: scale(2);
+    transform: scale(1.4);
   }
 }
 /* setting */
 /* reset (에릭마이어 reset에 추가로 reset하고 싶을 때)*/
+
+@keyframes feed {
+  to {
+    transform: rotate(1turn);
+  }
+}
 
 body {
   margin: 0;
@@ -95,8 +101,9 @@ strong {
   display: block;
   font-size: 20px;
   position: relative;
-  text-align: center;
-  margin: 30px 0;
+  width: 210px;
+  margin: 0 auto;
+  padding: 60px 0 0 0;
   color: #fff;
   animation: title 0.8s alternate infinite;
 }
@@ -106,7 +113,7 @@ strong {
   width: 600px;
   height: 600px;
   /* background-color: pink; */
-  margin: 100px auto;
+  margin: 10px auto;
   animation: pig_rabbit 1.8s alternate infinite;
 }
 
@@ -354,4 +361,37 @@ strong {
   /* animation-duration: */
   /* transform: scale(1, 1); */
   z-index: 10;
+}
+
+.carrot {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -10%;
+  left: 50%;
+  transform-origin: 0 500px;
+  animation: feed 3s linear infinite;
+}
+.carrot.one {
+  animation: feed 3s linear infinite;
+}
+
+.carrot.two {
+  animation: feed 3s 0.5s linear infinite;
+}
+
+.carrot.three {
+  animation: feed 3s 1s linear infinite;
+}
+
+.carrot.four {
+  animation: feed 3s 1.5s linear infinite;
+}
+
+.carrot.five {
+  animation: feed 3s 2s linear infinite;
+}
+
+.carrot.six {
+  animation: feed 3s 2.5s linear infinite;
 }
