@@ -1,10 +1,14 @@
 # @keyframes를 이용한 캐릭터 그리기
 
 
+## CSS로 돼지토끼를 그려봅시다!
+https://user-images.githubusercontent.com/38063033/192709959-973f3140-e691-4e3e-8b72-47d79a270030.mov
+
 
 
 
 ---
+## COMMIT CONVENTION
 - FEAT : 새로운 기능의 추가
 - FIX: 버그 수정
 - DOCS: 문서 수정
